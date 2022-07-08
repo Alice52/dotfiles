@@ -7,6 +7,9 @@ export SPACESHIP_DIR_TRUNC=0
 # Plugins.
 plugins=(git)
 
+# ohmyzsh upgrate
+# zstyle ':omz:update' mode auto
+
 source $ZSH/oh-my-zsh.sh
 
 # Set colors for LS_COLORS.
