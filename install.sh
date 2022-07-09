@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 create_symlinks() {
     # Get the directory in which this script lives.
     script_dir=$(dirname "$(readlink -f "$0")")
@@ -19,10 +18,9 @@ create_symlinks() {
 
 create_symlinks
 
-
 ## install font
 # sudo apt-get install powerline fonts-powerline -y
-exec: exec ./firacode.install
+sudo exec ./firacode.install
 
 echo "Initializing conda for zsh."
 conda init zsh
