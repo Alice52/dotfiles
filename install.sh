@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+git clone --depth=1 https://gitee.com/github-mirror-zsh/ohmyzsh.git $HOME/.oh-my-zsh
 
 create_symlinks() {
     # Get the directory in which this script lives.
