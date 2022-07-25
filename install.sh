@@ -21,17 +21,17 @@ create_symlinks() {
 create_symlinks
 
 ## install font
-sudo apt-get install powerline fonts-powerline -y
+## sudo apt-get install powerline fonts-powerline -y
 
 # echo "Initializing conda for zsh."
 # conda init zsh
 
 echo "Setting up the Spaceship theme."
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+git clone https://gitee.com/github-mirror-zsh/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z --depth=1
+git clone https://gitee.com/github-mirror-zsh/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://gitee.com/github-mirror-zsh/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1
+git clone https://gitee.com/github-mirror-zsh/zsh-z.git $ZSH_CUSTOM/plugins/zsh-z --depth=1
 
 sudo chsh -s $(which zsh)
