@@ -8,4 +8,4 @@ sudo ./Util/preconfig
 sudo ./configure
 sudo make -j 20 install
 
-sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
