@@ -5,7 +5,12 @@ ZSH_THEME="spaceship"
 export SPACESHIP_DIR_TRUNC=0
 
 # Plugins.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-z
+)
 
 # ohmyzsh upgrate
 # zstyle ':omz:update' mode auto
