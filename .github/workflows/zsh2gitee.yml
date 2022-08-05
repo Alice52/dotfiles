@@ -1,0 +1,102 @@
+name: Sync ZSH to Gitee
+
+on:
+  push:
+  schedule:
+    - cron:  '20 */1 * * *'
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Sync ZSH(dotfile) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/Alice52
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        mappings: "dotfiles=>dotfiles"
+        static_list: "dotfiles"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(ohmyzsh) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/ohmyzsh
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "ohmyzsh"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(zsh) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/zsh-users
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "zsh"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(zsh-z) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/agkozak
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "zsh-z"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(zsh-syntax-highlighting) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/zsh-users
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "zsh-syntax-highlighting"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(zsh-autosuggestions) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/zsh-users
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "zsh-autosuggestions"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
+
+    - name: Sync ZSH(spaceship-prompt) to Gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/spaceship-prompt
+        dst: gitee/github-mirror-zsh
+        dst_key: ${{ secrets.GITEE_SSH_KEY }}
+        dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        static_list: "spaceship-prompt"
+        src_account_type: user
+        dst_account_type: org
+        force_update: true
+        debug: true
