@@ -3,7 +3,7 @@ name: Sync Github to Gitee
 on:
   push:
   schedule:
-    - cron:  '20 4,23 * * *'
+    - cron:  '25 4,23 * * *'
 
 jobs:
   main:
@@ -16,6 +16,7 @@ jobs:
         dst: gitee/alice52_xz
         dst_key: ${{ secrets.GITEE_SSH_KEY }}
         dst_token: ${{ secrets.GITEE_API_TOKEN }}
+        black_list: "dotfiles,C"
         account_type: user
         force_update: true
         debug: true

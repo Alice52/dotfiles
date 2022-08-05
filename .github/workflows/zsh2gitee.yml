@@ -9,7 +9,7 @@ jobs:
   main:
     runs-on: ubuntu-20.04
     steps:
-    - name: Sync ZSH(dotfile) to Gitee
+    - name: Sync ZSH(dotfiles) to Gitee
       uses: Yikun/hub-mirror-action@master
       with:
         src: github/Alice52
