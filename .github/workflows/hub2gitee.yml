@@ -3,7 +3,7 @@ name: Sync Github to Gitee
 on:
   push:
   schedule:
-    - cron:  '25 10 * * *'
+    - cron:  '25 18 * * *'
 
 jobs:
   main:
