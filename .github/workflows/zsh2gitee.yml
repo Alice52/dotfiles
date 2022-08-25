@@ -3,7 +3,7 @@ name: Sync ZSH to Gitee
 on:
   push:
   schedule:
-    - cron:  '5 1 * * *'
+    - cron:  '5 18 * * *'
 
 jobs:
   main:
