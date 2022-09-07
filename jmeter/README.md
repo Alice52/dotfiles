@@ -16,5 +16,5 @@
 
    ```shell
    chmod +x gradlew
-   gradlew jmGui -PenvironmentName=qa1
+   ./gradlew jmGui -PenvironmentName=qa1
    ```
