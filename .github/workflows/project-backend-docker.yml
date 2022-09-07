@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - seed
     paths:
       - 'backend/graphql/**'
       - '.github/workflows/docker-project-cloud-backend.yml'
@@ -48,7 +49,7 @@ jobs:
 
       - name: Build Project
         run: |
-          PROJECT_NAME=graphql
+          PROJECT_NAME=project
           cd $PROJECT_HOME/$PROJECT_PREFIX/$PROJECT_NAME
           cd common-api/ && ./reparent.sh && cd ../
           mvn clean package -DskipTests=true
