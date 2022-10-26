@@ -55,6 +55,11 @@ alias gfrb='git fetch origin && git rebase origin/master'
 alias gxn='git clean -dn'
 alias gx='git clean -df'
 alias gsha='git rev-parse HEAD | pbcopy'
+alias gsa='git submodule add '
+alias gsi='git submodule init'
+alias gsp='git submodule update --remote'
+alias gsd='git submodule update --recursive'
+
 alias ghci='gh run list -L 1'
 ######################### git config ###########################
 
