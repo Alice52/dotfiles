@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": "java-ocean"
+		},
+		{
+			"path": "java-ocean/database"
+		},
+		{
+			"path": "java-ocean/programming"
+		},
+		{
+			"path": "java-ocean/http"
+		},
+		{
+			"path": "algorithms"
+		},
+		{
+			"path": "tutorials-sample"
+		},
+		{
+			"path": "project"
+		},
+		{
+			"path": "practice"
+		},
+		{
+			"path": "tools"
+		},
+		{
+			"path": "go-tutorial"
+		},
+		{
+			"path": "grpc-tutorials"
+		},
+		{
+			"path": "diagrams"
+		},
+	],
+	"settings": {}
+}
