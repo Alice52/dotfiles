@@ -1,41 +1,80 @@
 {
 	"folders": [
 		{
-			"path": "java-ocean"
+			"path": ".."
 		},
 		{
-			"path": "java-ocean/database"
+			"path": "../../interview"
 		},
 		{
-			"path": "java-ocean/programming"
+			"path": "../../java-ocean"
 		},
 		{
-			"path": "java-ocean/http"
+			"path": "../../java-ocean/database"
 		},
 		{
-			"path": "algorithms"
+			"path": "../../java-ocean/programming"
 		},
 		{
-			"path": "tutorials-sample"
+			"path": "../../java-ocean/http"
 		},
 		{
-			"path": "project"
+			"path": "../../algorithms"
 		},
 		{
-			"path": "practice"
+			"path": "../../spring-5.2.x"
 		},
 		{
-			"path": "tools"
+			"path": "../../tutorials-sample"
 		},
 		{
-			"path": "go-tutorial"
+			"path": "../../project"
 		},
 		{
-			"path": "grpc-tutorials"
+			"path": "../../practice"
 		},
 		{
-			"path": "diagrams"
+			"path": "../../lite-starter"
+		},
+		{
+			"path": "../../graphql"
+		},
+		{
+			"path": "../../tools"
+		},
+		{
+			"path": "../../go-tutorial"
+		},
+		{
+			"path": "../../grpc-tutorials"
+		},
+		{
+			"path": "../../gin-vue-admin"
+		},
+		{
+			"path": "../../docker"
+		},
+		{
+			"path": "../../Alice52"
+		},
+		{
+			"path": "../../uid-generator"
+		},
+		{
+			"path": "../../diagrams"
 		},
 	],
-	"settings": {}
+	"settings": {
+		"terminal.integrated.profiles.windows": {
+			"git-bash": {
+				"path": "E:\\Git\\bin\\bash.exe",
+				"args": []
+			},
+			"git-bash-c": {
+				"path": "C:\\Program Files\\Git\\bin\\bash.exe",
+				"args": []
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "git-bash",
+	}
 }
