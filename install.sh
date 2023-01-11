@@ -2,6 +2,9 @@
 
 git clone --depth=1 https://gitee.com/github-mirror-zsh/ohmyzsh.git $HOME/.oh-my-zsh
 
+# create .zshrc_custom
+touch $HOME/.zshrc_custom
+
 create_symlinks() {
     # Get the directory in which this script lives.
     script_dir=$(dirname "$(readlink -f "$0")")
