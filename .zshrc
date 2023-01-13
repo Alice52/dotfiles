@@ -3,6 +3,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 # Theme.
 ZSH_THEME="spaceship"
 export SPACESHIP_DIR_TRUNC=0
+export SPACESHIP_PROMPT_ASYNC=false
 
 # Plugins.
 plugins=(
@@ -10,6 +11,11 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-z
+    z
+    timer
+    sudo
+    docker
+    docker-compose
 )
 
 # ohmyzsh upgrate

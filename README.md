@@ -34,6 +34,7 @@
 
 ## zsh
 
+0. 使用 ssh 连接时需要 fira code 字体的支持
 1. install zsh: yum | apt-get
 
    ```shell
@@ -89,6 +90,18 @@
    # 1. 相关环境变量需要配置在 .zshrc | .zshrc_custom
    # 2. source ~/.zshrc
    ```
+
+6. plugins
+
+   - git
+   - zsh-autosuggestions
+   - zsh-syntax-highlighting
+   - zsh-z
+   - z: z jump folder
+   - timer
+   - sudo: double esc
+   - docker
+   - docker-compose
 
 ## common
 

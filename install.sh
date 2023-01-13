@@ -37,7 +37,7 @@ git clone https://gitee.com/github-mirror-zsh/zsh-autosuggestions.git ${ZSH_CUST
 git clone https://gitee.com/github-mirror-zsh/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth=1
 git clone https://gitee.com/github-mirror-zsh/zsh-z.git $ZSH_CUSTOM/plugins/zsh-z --depth=1
 
-sudo chsh -s $(which zsh)
-sudo chsh -s /bin/zsh
+chsh -s $(which zsh)
+chsh -s /bin/zsh
 
 source .zshrc
