@@ -19,6 +19,15 @@
 			"path": "../../java-ocean/http"
 		},
 		{
+			"path": "../../java-ocean/linux"
+		},
+		{
+			"path": "../../java-ocean/nginx"
+		},
+		{
+			"path": "../../java-ocean/mq"
+		},
+		{
 			"path": "../../algorithms"
 		},
 		{
@@ -46,7 +55,7 @@
 			"path": "../../go-tutorial"
 		},
 		{
-			"path": "../../grpc-tutorials"
+			"path": "../../grpc-tutorial"
 		},
 		{
 			"path": "../../gin-vue-admin"
@@ -63,6 +72,9 @@
 		{
 			"path": "../../diagrams"
 		},
+		{
+			"path": "../../.github"
+		}
 	],
 	"settings": {
 		"terminal.integrated.profiles.windows": {

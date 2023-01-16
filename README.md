@@ -91,7 +91,7 @@
    # 2. source ~/.zshrc
    ```
 
-6. plugins
+6. plugins: `omz plugin info [systemd]`
 
    - git
    - zsh-autosuggestions

@@ -4,11 +4,11 @@
 git clone git@github.com:private-repoes/interview.git ../../interview
 git clone git@github.com:Alice52/algorithms.git ../../algorithms
 git clone git@github.com:Alice52/spring-5.2.x.git ../../spring-5.2.x
-git clone git@github.com:Alice52/tutorials-sample.git ../../tutorials-sample
+git clone git@github.com:Alice52/java-tutorials.git ../../java-tutorials
 git clone git@github.com:Alice52/project.git ../../project
 
 git clone git@github.com:Alice52/go-tutorial.git ../../go-tutorial
-git clone git@github.com:Alice52/grpc-tutorials.git ../../grpc-tutorials
+git clone git@github.com:Alice52/grpc-tutorial.git ../../grpc-tutorial
 git clone git@github.com:Alice52/gin-vue-admin.git ../../gin-vue-admin
 git clone git@github.com:Alice52/docker.git ../../docker
 git clone git@github.com:Alice52/Alice52.git ../../Alice52
