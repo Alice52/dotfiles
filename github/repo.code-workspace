@@ -1,10 +1,14 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"path": "..",
+			"name": "dotfiles"
 		},
 		{
 			"path": "../../interview"
+		},
+		{
+			"path": "../../algorithms"
 		},
 		{
 			"path": "../../java-ocean"
@@ -28,13 +32,31 @@
 			"path": "../../java-ocean/mq"
 		},
 		{
-			"path": "../../algorithms"
+			"path": "../../java-ocean/rpc/grpc"
+		},
+		{
+			"path": "../../tutorials"
+		},
+		{
+			"path": "../../tutorials/java-tutorials"
+		},
+		{
+			"path": "../../tutorials/go-tutorial"
+		},
+		{
+			"path": "../../tutorials/python-tutorial"
+		},
+		{
+			"path": "../../tutorials/c-tutorial"
+		},
+		{
+			"path": "../../tutorials/vue-tutorial"
+		},
+		{
+			"path": "../../tutorials/kotlin-tutorial"
 		},
 		{
 			"path": "../../spring-5.2.x"
-		},
-		{
-			"path": "../../tutorials-sample"
 		},
 		{
 			"path": "../../project"
@@ -46,16 +68,13 @@
 			"path": "../../lite-starter"
 		},
 		{
-			"path": "../../graphql"
-		},
-		{
 			"path": "../../tools"
 		},
 		{
-			"path": "../../go-tutorial"
+			"path": "../../graphql"
 		},
 		{
-			"path": "../../grpc-tutorial"
+			"path": "../../uid-generator"
 		},
 		{
 			"path": "../../gin-vue-admin"
@@ -67,13 +86,7 @@
 			"path": "../../Alice52"
 		},
 		{
-			"path": "../../uid-generator"
-		},
-		{
 			"path": "../../diagrams"
-		},
-		{
-			"path": "../../.github"
 		}
 	],
 	"settings": {
