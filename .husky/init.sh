@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ..
 # 安装 husky
 npm install -g husky
 
