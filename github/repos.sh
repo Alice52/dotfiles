@@ -28,6 +28,9 @@ git clone git@github.com:Alice52/docker.git ../../docker
 git clone git@github.com:Alice52/Alice52.git ../../Alice52
 git clone git@github.com:Alice52/diagrams.git ../../diagrams
 
+git clone git@github.com:Alice52/system-design.git ../../system-design
+cd ../../system-design && git submodule init && git submodule update --remote && cd -
+
 # put this to last command due to rpc/grpc modules maybe failed
 git clone git@github.com:Alice52/java-ocean.git ../../java-ocean
 cd ../../java-ocean && git submodule init && git submodule update --remote && cd -

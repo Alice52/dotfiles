@@ -87,12 +87,15 @@
 		},
 		{
 			"path": "../../diagrams"
+		},
+		{
+			"path": "../../system-design"
 		}
 	],
 	"settings": {
 		"terminal.integrated.profiles.windows": {
 			"git-bash": {
-				"path": "E:\\Git\\bin\\bash.exe",
+				"path": "D:\\dev\\common\\Git\\bin\\bash.exe",
 				"args": []
 			},
 			"git-bash-c": {
