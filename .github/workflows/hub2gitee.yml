@@ -1,6 +1,12 @@
 name: Sync Github to Gitee
 
 on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Mannual Trigger Tags'
+        required: false
+        type: boolean
   push:
   schedule:
     - cron: '25 18 * * *'

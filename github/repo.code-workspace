@@ -23,6 +23,12 @@
 			"path": "../../java-ocean/http"
 		},
 		{
+			"path": "../../java-ocean/optimize"
+		},
+		{
+			"path": "../../java-ocean/job"
+		},
+		{
 			"path": "../../java-ocean/linux"
 		},
 		{
@@ -65,6 +71,9 @@
 			"path": "../../practice"
 		},
 		{
+			"path": "../../practice/backend/project-cloud-custom/common-api"
+		},
+		{
 			"path": "../../lite-starter"
 		},
 		{
@@ -90,6 +99,12 @@
 		},
 		{
 			"path": "../../system-design"
+		},
+		{
+			"path": "../../lite-bom"
+		},
+		{
+			"path": "../../yun-func"
 		}
 	],
 	"settings": {
@@ -104,5 +119,9 @@
 			}
 		},
 		"terminal.integrated.defaultProfile.windows": "git-bash",
+		"Codegeex.DisabledFor": {
+			"markdown": true
+		},
+		"Codegeex.EnableExtension": false,
 	}
 }
