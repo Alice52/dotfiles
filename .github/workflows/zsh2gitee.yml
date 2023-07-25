@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Sync ZSH(dotfiles) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/Alice52
           dst: gitee/github-mirror-zsh
@@ -27,7 +27,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(ohmyzsh) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/ohmyzsh
           dst: gitee/github-mirror-zsh
@@ -40,7 +40,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(zsh) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/zsh-users
           dst: gitee/github-mirror-zsh
@@ -53,7 +53,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(zsh-z) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/agkozak
           dst: gitee/github-mirror-zsh
@@ -66,7 +66,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(zsh-syntax-highlighting) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/zsh-users
           dst: gitee/github-mirror-zsh
@@ -79,7 +79,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(zsh-autosuggestions) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/zsh-users
           dst: gitee/github-mirror-zsh
@@ -92,7 +92,7 @@ jobs:
           debug: true
 
       - name: Sync ZSH(spaceship-prompt) to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: Yikun/hub-mirror-action@v1.3
         with:
           src: github/spaceship-prompt
           dst: gitee/github-mirror-zsh
