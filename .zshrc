@@ -70,7 +70,7 @@ alias ghci='gh run list -L 1'
 ######################### git config ###########################
 
 # Set colors for LS_COLORS.
-eval $(dircolors ~/.dircolors)
+# eval $(dircolors ~/.dircolors)
 
 # config profile
 source /etc/profile
