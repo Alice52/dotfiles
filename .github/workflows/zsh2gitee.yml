@@ -12,19 +12,30 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 30
     steps:
+      # - name: Sync ZSH(dotfiles) to Gitee
+      #   uses: Yikun/hub-mirror-action@v1.3
+      #   with:
+      #     src: github/Alice52
+      #     dst: gitee/github-mirror-zsh
+      #     dst_key: ${{ secrets.GITEE_SSH_KEY }}
+      #     dst_token: ${{ secrets.GITEE_API_TOKEN }}
+      #     mappings: 'dotfiles=>dotfiles'
+      #     static_list: 'dotfiles'
+      #     src_account_type: user
+      #     dst_account_type: org
+      #     force_update: true
+      #     debug: true
+
+  
       - name: Sync ZSH(dotfiles) to Gitee
-        uses: Yikun/hub-mirror-action@v1.3
+        uses: Yikun/hub-mirror-action@master
         with:
           src: github/Alice52
           dst: gitee/github-mirror-zsh
           dst_key: ${{ secrets.GITEE_SSH_KEY }}
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
-          mappings: 'dotfiles=>dotfiles'
           static_list: 'dotfiles'
-          src_account_type: user
-          dst_account_type: org
-          force_update: true
-          debug: true
+          clone_style: ssh
 
       - name: Sync ZSH(ohmyzsh) to Gitee
         uses: Yikun/hub-mirror-action@v1.3
