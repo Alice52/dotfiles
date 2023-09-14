@@ -73,6 +73,13 @@ alias gsd='git submodule update --recursive'
 alias ghci='gh run list -L 1'
 ######################### git config ###########################
 
+######################## wsl start ########################
+alias sw='ssh -p 2288 alice52@frps.hubby.top'
+alias wsl='ssh -p 2288 alice52@frps.hubby.top'
+alias sa3='ssh root@alice3.hubby.top'
+alias sa5='ssh root@alice5.hubby.top'
+######################## wsl end ########################
+
 # Set colors for LS_COLORS.
 # eval $(dircolors ~/.dircolors)
 
