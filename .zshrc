@@ -27,6 +27,10 @@ source $ZSH/oh-my-zsh.sh
 # Use github/hub
 # alias git=hub
 # Go to project root
+
+alias gef='git update-index --chmod=+x'
+alias guef='git update-index --chmod=-x'
+
 alias grt='cd "$(git rev-parse --show-toplevel)"'
 alias gs='git status'
 alias gp='git push'
