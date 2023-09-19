@@ -17,6 +17,9 @@
 			"path": "../../java-ocean/database"
 		},
 		{
+			"path": "../../java-ocean/oauth"
+		},
+		{
 			"path": "../../java-ocean/programming"
 		},
 		{
@@ -108,17 +111,17 @@
 		}
 	],
 	"settings": {
-		"terminal.integrated.profiles.windows": {
-			"git-bash": {
-				"path": "D:\\dev\\common\\Git\\bin\\bash.exe",
-				"args": []
-			},
-			"git-bash-c": {
-				"path": "C:\\Program Files\\Git\\bin\\bash.exe",
-				"args": []
-			}
-		},
-		"terminal.integrated.defaultProfile.windows": "git-bash",
+		// "terminal.integrated.profiles.windows": {
+		// 	"git-bash": {
+		// 		"path": "D:\\dev\\common\\Git\\bin\\bash.exe",
+		// 		"args": []
+		// 	},
+		// 	"git-bash-c": {
+		// 		"path": "C:\\Program Files\\Git\\bin\\bash.exe",
+		// 		"args": []
+		// 	}
+		// },
+		// "terminal.integrated.defaultProfile.windows": "git-bash",
 		"Codegeex.DisabledFor": {
 			"markdown": true
 		},
