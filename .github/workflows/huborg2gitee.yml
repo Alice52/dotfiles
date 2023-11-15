@@ -22,6 +22,7 @@ jobs:
         uses: yi-Xu-0100/repo-list-generator@v1.1.1
         with:
           user: private-repoes
+          my_token: ${{ secrets.PR_HUB_API_TOKEN }}
       - name: Sync Org(private-repoes) to Gitee
         uses: Yikun/hub-mirror-action@master
         with:
@@ -30,9 +31,10 @@ jobs:
           dst_key: ${{ secrets.GITEE_SSH_KEY }}
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
           black_list: '.github'
-          static_list: ${{ steps.repo.outputs. repoList_ALL }}
+          static_list: ${{ steps.pr_repo.outputs. repoList_ALL }}
           src_account_type: org
           dst_account_type: org
+          clone_style: ssh
           force_update: true
           debug: true
 
@@ -53,6 +55,7 @@ jobs:
         uses: yi-Xu-0100/repo-list-generator@v1.1.1
         with:
           user: micro-services-roadmap
+          my_token: ${{ secrets.MSR_HUB_API_TOKEN }}
       - name: Sync Org(micro-services-roadmap) to Gitee
         uses: Yikun/hub-mirror-action@master
         with:
@@ -61,8 +64,9 @@ jobs:
           dst_key: ${{ secrets.GITEE_SSH_KEY }}
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
           black_list: '.github'
-          static_list: ${{ steps.repo.outputs. repoList_ALL }}
+          static_list: ${{ steps.msr_repo.outputs. repoList_ALL }}
           src_account_type: org
           dst_account_type: org
+          clone_style: ssh
           force_update: true
           debug: true
