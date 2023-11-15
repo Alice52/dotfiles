@@ -1,0 +1,68 @@
+name: Sync Github Orgs to Gitee
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Mannual Trigger Tags'
+        required: false
+        type: boolean
+  push:
+  schedule:
+    - cron: '25 18 * * *'
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 30
+    steps:
+
+      - name: Get private-repoes private repository list
+        id: pr_repo
+        uses: yi-Xu-0100/repo-list-generator@v1.1.1
+        with:
+          user: private-repoes
+      - name: Sync Org(private-repoes) to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/private-repoes
+          dst: gitee/private-repoes
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          black_list: '.github'
+          static_list: ${{ steps.repo.outputs. repoList_ALL }}
+          src_account_type: org
+          dst_account_type: org
+          force_update: true
+          debug: true
+
+      - name: Sync Org(fork-repoes) to Gitee
+        uses: Yikun/hub-mirror-action@v1.3
+        with:
+          src: github/fork-repoes
+          dst: gitee/fork-repoes
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          src_account_type: org
+          dst_account_type: org
+          force_update: true
+          debug: true
+
+      - name: Get micro-services-roadmap private repository list
+        id: msr_repo
+        uses: yi-Xu-0100/repo-list-generator@v1.1.1
+        with:
+          user: micro-services-roadmap
+      - name: Sync Org(micro-services-roadmap) to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/micro-services-roadmap
+          dst: gitee/micro-services-roadmap
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          black_list: '.github'
+          static_list: ${{ steps.repo.outputs. repoList_ALL }}
+          src_account_type: org
+          dst_account_type: org
+          force_update: true
+          debug: true

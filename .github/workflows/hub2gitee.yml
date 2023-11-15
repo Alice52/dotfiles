@@ -16,24 +16,24 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 30
     steps:
-      - name: Sync Github to Gitee
-        uses: Yikun/hub-mirror-action@v1.3
-        with:
-          src: github/Alice52
-          dst: gitee/alice52_xz
-          dst_key: ${{ secrets.GITEE_SSH_KEY }}
-          dst_token: ${{ secrets.GITEE_API_TOKEN }}
-          black_list: '.github,C,dotfiles'
-          account_type: user
-          force_update: true
-          debug: true
+      # - name: Sync Github to Gitee
+      #   uses: Yikun/hub-mirror-action@v1.3
+      #   with:
+      #     src: github/Alice52
+      #     dst: gitee/alice52_xz
+      #     dst_key: ${{ secrets.GITEE_SSH_KEY }}
+      #     dst_token: ${{ secrets.GITEE_API_TOKEN }}
+      #     black_list: '.github,C,dotfiles'
+      #     account_type: user
+      #     force_update: true
+      #     debug: true
 
       - name: Get private repository list
         id: repo
         uses: yi-Xu-0100/repo-list-generator@v1.1.1
         with:
           my_token: ${{ secrets.HUB_API_TOKEN }}
-  
+
       - name: Mirror Private Repository
         uses: Yikun/hub-mirror-action@master
         with:
@@ -42,7 +42,7 @@ jobs:
           dst_key: ${{ secrets.GITEE_SSH_KEY }}
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
           black_list: '.github,C,dotfiles'
-          static_list: ${{ steps.repo.outputs. repoList_PRIVATE }}
+          static_list: ${{ steps.repo.outputs. repoList_ALL }}
           clone_style: ssh
           account_type: user
           force_update: true
