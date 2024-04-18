@@ -27,6 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # Use github/hub
 # alias git=hub
 # Go to project root
+alias c='code .'
 
 alias gef='git update-index --chmod=+x'
 alias guef='git update-index --chmod=-x'
@@ -39,6 +40,7 @@ alias gpft='git push --follow-tags'
 alias gpl='git pull --rebase'
 alias gcl='git clone'
 alias gst='git stash'
+alias gstp='git stash pop'
 alias grm='git rm'
 alias gmv='git mv'
 alias master='git checkout master'

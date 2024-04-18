@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
-
       - name: Get private-repoes private repository list
         id: pr_repo
         uses: yi-Xu-0100/repo-list-generator@v1.1.1
@@ -86,6 +85,27 @@ jobs:
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
           black_list: '.github'
           static_list: ${{ steps.wpp_repo.outputs. repoList_ALL }}
+          src_account_type: org
+          dst_account_type: org
+          clone_style: ssh
+          force_update: true
+          debug: true
+
+      - name: Get own-workers private repository list
+        id: own_repo
+        uses: yi-Xu-0100/repo-list-generator@v1.1.1
+        with:
+          user: own-workers
+          my_token: ${{ secrets.FULL_KEY }}
+      - name: Sync Org(own-workers) to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/own-workers
+          dst: gitee/own-worker
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          black_list: '.github'
+          static_list: ${{ steps.own_repo.outputs. repoList_ALL }}
           src_account_type: org
           dst_account_type: org
           clone_style: ssh
