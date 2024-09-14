@@ -9,13 +9,55 @@ on:
         type: boolean
   push:
   schedule:
-    - cron: '25 18 * * *'
+    - cron: '16 18 * * *'
 
 jobs:
   main:
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
+      - name: Get wpp private repository list
+        id: wpp_repo
+        uses: yi-Xu-0100/repo-list-generator@v1.1.1
+        with:
+          user: wordpress-plus
+          my_token: ${{ secrets.WPP_HUB_API_TOKEN }}
+      - name: Sync Org(wordpress-plus) to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/wordpress-plus
+          dst: gitee/wordpress-plus
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          black_list: '.github,.github-private'
+          static_list: ${{ steps.wpp_repo.outputs. repoList_ALL }}
+          src_account_type: org
+          dst_account_type: org
+          clone_style: ssh
+          force_update: true
+          debug: true
+
+      - name: Get wordpress-plus-ultra private repository list
+        id: wppu_repo
+        uses: yi-Xu-0100/repo-list-generator@v1.1.1
+        with:
+          user: wordpress-plus-ultra
+          my_token: ${{ secrets.FULL_KEY }}
+      - name: Sync Org(wordpress-plus-ultra) to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/wordpress-plus-ultra
+          dst: gitee/wordpress-plus
+          dst_key: ${{ secrets.GITEE_SSH_KEY }}
+          dst_token: ${{ secrets.GITEE_API_TOKEN }}
+          black_list: '.github'
+          static_list: ${{ steps.wppu_repo.outputs. repoList_ALL }}
+          src_account_type: org
+          dst_account_type: org
+          clone_style: ssh
+          force_update: true
+          debug: true
+
       - name: Get private-repoes private repository list
         id: pr_repo
         uses: yi-Xu-0100/repo-list-generator@v1.1.1
@@ -62,29 +104,8 @@ jobs:
           dst: gitee/micro-services-roadmap
           dst_key: ${{ secrets.GITEE_SSH_KEY }}
           dst_token: ${{ secrets.GITEE_API_TOKEN }}
-          black_list: '.github'
-          static_list: ${{ steps.msr_repo.outputs. repoList_ALL }}
-          src_account_type: org
-          dst_account_type: org
-          clone_style: ssh
-          force_update: true
-          debug: true
-
-      - name: Get wpp private repository list
-        id: wpp_repo
-        uses: yi-Xu-0100/repo-list-generator@v1.1.1
-        with:
-          user: wordpress-plus
-          my_token: ${{ secrets.WPP_HUB_API_TOKEN }}
-      - name: Sync Org(wordpress-plus) to Gitee
-        uses: Yikun/hub-mirror-action@master
-        with:
-          src: github/wordpress-plus
-          dst: gitee/wordpress-plus
-          dst_key: ${{ secrets.GITEE_SSH_KEY }}
-          dst_token: ${{ secrets.GITEE_API_TOKEN }}
           black_list: '.github,.github-private'
-          static_list: ${{ steps.wpp_repo.outputs. repoList_ALL }}
+          static_list: ${{ steps.msr_repo.outputs. repoList_ALL }}
           src_account_type: org
           dst_account_type: org
           clone_style: ssh
